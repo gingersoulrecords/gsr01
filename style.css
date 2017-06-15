@@ -43,6 +43,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
+
+/*--------------------------------------------------------------
+# BB STUFF
+--------------------------------------------------------------*/
+
+.fl-col{
+	min-height: 0!important;
+}
+
+
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -375,7 +386,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+/* 	margin: 0 0 1.5em 3em; */
 }
 
 ul {
@@ -753,9 +764,11 @@ a:active {
 	display: block;
 }
 
+/*
 .hentry {
 	margin: 0 0 1.5em;
 }
+*/
 
 .byline,
 .updated:not(.published) {
@@ -767,11 +780,13 @@ a:active {
 	display: inline;
 }
 
+/*
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+*/
 
 .page-links {
 	clear: both;
