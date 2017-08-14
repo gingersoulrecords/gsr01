@@ -17,7 +17,7 @@
 	
 	
 </div><!-- #page -->
-
+<?php echo do_shortcode('[fl_builder_insert_layout slug="gsr-footer"]'); ?>
 <?php wp_footer(); ?>
 
 </body>

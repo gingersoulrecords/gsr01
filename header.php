@@ -47,6 +47,9 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>
 -->
+
+	
+	<?php echo do_shortcode('[fl_builder_insert_layout slug="gsr-header"]'); ?>
 		
 	</header><!-- #masthead -->
 
