@@ -119,17 +119,22 @@ add_action( 'wp_enqueue_scripts', 'gsr01_scripts' );
 
 //SOULFADE
 
-add_action( 'plugins_loaded', array( 'SoulFade', 'init' ) );
-
-class SoulFade {
-	public static function init(){
-		add_action( 'wp_head', array( 'SoulFade', 'style' ), 1 );
-	}
-	public static function style(){
-		echo '<style>body{opacity:0;transition:opacity .25s linear;}body.soulfade{opacity:1;}</style>';
-		echo '<script>window.onload = function(){var body = document.getElementsByTagName("body");body[0].classList.add("soulfade")};</script>';
+if (!class_exists('SoulFade')) {
+	add_action( 'plugins_loaded', array( 'SoulFade', 'init' ) );
+	
+	class SoulFade {
+		public static function init(){
+			add_action( 'wp_head', array( 'SoulFade', 'style' ), 1 );
+		}
+		public static function style(){
+			echo '<style>body{opacity:0;transition:opacity .25s linear;}body.soulfade{opacity:1;}</style>';
+			echo '<script>window.onload = function(){var body = document.getElementsByTagName("body");body[0].classList.add("soulfade")};</script>';
+		}
 	}
 }
+
+
+
 
 // Register SoulTemplates
 function create_soultemplates() {
