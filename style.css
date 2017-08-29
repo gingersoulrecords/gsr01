@@ -56,6 +56,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	display: none;
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -71,6 +76,11 @@ html {
 
 body {
 	margin: 0;
+	opacity:0;
+	-webkit-transition: opacity 0.25s linear;
+-moz-transition: opacity 0.25s linear;
+-o-transition: opacity 0.25s linear;
+transition: opacity 0.25s linear;
 }
 
 article,
@@ -369,7 +379,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+/* 	background: #fff; */
 }
 
 blockquote:before,

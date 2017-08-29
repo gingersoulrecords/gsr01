@@ -108,6 +108,7 @@ function gsr01_scripts() {
 	wp_enqueue_style( 'gsr01-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'gsr01-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'gsr01-soulfade', get_template_directory_uri() . '/js/soulfade.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gsr01-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -116,23 +117,6 @@ function gsr01_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'gsr01_scripts' );
-
-//SOULFADE
-
-if (!class_exists('SoulFade')) {
-	add_action( 'plugins_loaded', array( 'SoulFade', 'init' ) );
-	
-	class SoulFade {
-		public static function init(){
-			add_action( 'wp_head', array( 'SoulFade', 'style' ), 1 );
-		}
-		public static function style(){
-			echo '<style>body{opacity:0;transition:opacity .25s linear;}body.soulfade{opacity:1;}</style>';
-			echo '<script>window.onload = function(){var body = document.getElementsByTagName("body");body[0].classList.add("soulfade")};</script>';
-		}
-	}
-}
-
 
 
 
@@ -193,7 +177,13 @@ function create_soultemplates() {
 }
 add_action( 'init', 'create_soultemplates', 0 );
 
+// DISABLE RESPONSIVE IMAGES
 
+function meks_disable_srcset( $sources ) {
+    return false;
+}
+ 
+add_filter( 'wp_calculate_image_srcset', 'meks_disable_srcset' );
 
 
 

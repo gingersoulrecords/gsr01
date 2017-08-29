@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!--
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -21,10 +22,11 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php gsr01_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header>
+-->
 
 	<div class="entry-content">
 		<?php
@@ -41,14 +43,10 @@
 				get_the_title()
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gsr01' ),
-				'after'  => '</div>',
-			) );
+
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php gsr01_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
+	
 </article><!-- #post-<?php the_ID(); ?> -->
