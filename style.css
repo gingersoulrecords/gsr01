@@ -73,7 +73,7 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
-	overflow-x: hidden;
+/* 	overflow-x: hidden; */
     width: 100%;
 }
 
@@ -84,6 +84,10 @@ body {
 -moz-transition: opacity 0.25s linear;
 -o-transition: opacity 0.25s linear;
 transition: opacity 0.25s linear;
+}
+
+#page{
+	width:100%;
 }
 
 article,
