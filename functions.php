@@ -229,3 +229,19 @@ function my_theme_header_footer_support() {
 	add_theme_support( 'fl-theme-builder-footers' );
 }
 
+// Add Shortcode
+function h1( $atts , $content = null ) {
+
+	// Attributes
+	$atts = shortcode_atts(
+		array(
+			'class' => '',
+		),
+		$atts,
+		'h1'
+	);
+
+	return '<h1 class="' . $atts['class'] . '">' . $content . '</h1>';
+
+}
+add_shortcode( 'h1', 'h1' );
