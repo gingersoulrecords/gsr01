@@ -64,9 +64,6 @@ html {
 body{
 	overflow-x:hidden;
 }
-
-
-
  
 .fl-builder--menu {
     display: flex;
@@ -81,12 +78,13 @@ body{
 .fl-builder--menu > button[data-view="textimagebanners"] {order: 3;}
 .fl-builder--menu > button[data-view="backgroundmultiples"] {order: 4;}
 .fl-builder--menu > button[data-view="textmultiples"] {order: 5;}
-.fl-builder--menu > button[data-view="textimagemultiples"] {order: 6;}
-.fl-builder--menu > button[data-view="postloops"] {order: 7;}
-.fl-builder--menu > button[data-view="carousels"] {order: 8;}
-.fl-builder--menu > button[data-view="combinations"] {order: 9;}
-.fl-builder--menu > button[data-view="footers"] {order: 10;}
-.fl-builder--menu > button[data-view="navigationsystems"] {order: 11;}
+.fl-builder--menu > button[data-view="imagemultiples"] {order: 6;}
+.fl-builder--menu > button[data-view="textimagemultiples"] {order: 7;}
+.fl-builder--menu > button[data-view="postloops"] {order: 8;}
+.fl-builder--menu > button[data-view="carousels"] {order: 9;}
+.fl-builder--menu > button[data-view="combinations"] {order: 10;}
+.fl-builder--menu > button[data-view="footers"] {order: 11;}
+.fl-builder--menu > button[data-view="navigationsystems"] {order: 12;}
 
 
 
@@ -105,12 +103,6 @@ html {
 body {
 	margin: 0;
 	opacity:0;
-/*
-	-webkit-transition: opacity 0.25s linear;
--moz-transition: opacity 0.25s linear;
--o-transition: opacity 0.25s linear;
-transition: opacity 0.25s linear;
-*/
 }
 
 #page{
